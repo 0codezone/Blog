@@ -18,8 +18,10 @@ router.put("/:id", async (req, res) => {
         { new: true }
       );
       res.status(200).json("data updated succesfully :", updatedUser);
+      alert("user Updated succesfully");
     } catch (error) {
       res.status(500).json(error);
+      alert("user Updated Error");
     }
   } else {
     res.status(401).json("You can only update your account");
