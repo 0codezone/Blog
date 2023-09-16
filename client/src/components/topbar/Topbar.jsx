@@ -5,7 +5,7 @@ import { Context } from "../../context/Context";
 
 export default function Topbar() {
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:8801/file/";
+  const PF = "https://mern-blog-app-i7er.onrender.com/file/";
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });

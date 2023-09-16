@@ -12,7 +12,7 @@ export default function Settings() {
   const [success, setSuccess] = useState(false);
 
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:8801/file/";
+  const PF = "https://mern-blog-app-i7er.onrender.com/file/";
 
   const handleSubmit = async (e) => {
     e.preventDefault();

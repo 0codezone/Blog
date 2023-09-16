@@ -1,7 +1,7 @@
 import "./post.css";
 import { Link } from "react-router-dom";
 export default function Post({ post }) {
-  const PF = "http://localhost:8801/file/";
+  const PF = "https://mern-blog-app-i7er.onrender.com/file/";
   return (
     <div className="post">
       {post.photo && (

@@ -8,7 +8,7 @@ import { Context } from "../../context/Context";
 export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
-  const PF = "http://localhost:8801/file/";
+  const PF = "https://mern-blog-app-i7er.onrender.com/file/";
   const [post, setPost] = useState({});
   const { user } = useContext(Context);
 
