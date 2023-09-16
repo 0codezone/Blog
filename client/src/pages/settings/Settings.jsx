@@ -30,12 +30,15 @@ export default function Settings() {
       data.append("file", file);
       updatedUser.profilePic = filename;
       try {
-        await axios.post("http://localhost:8801/api/upload", data);
+        await axios.post(
+          "https://mern-blog-app-i7er.onrender.com/api/upload",
+          data
+        );
       } catch (err) {}
     }
     try {
       const res = await axios.put(
-        `http://localhost:8801/api/users/${user._id}`,
+        `https://mern-blog-app-i7er.onrender.com/api/users/${user._id}`,
         updatedUser
       );
       setSuccess(true);

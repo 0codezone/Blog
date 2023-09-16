@@ -13,10 +13,13 @@ export default function Login() {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post("http://localhost:8801/api/auth/login", {
-        username,
-        password,
-      });
+      const res = await axios.post(
+        "https://mern-blog-app-i7er.onrender.com/api/auth/login",
+        {
+          username,
+          password,
+        }
+      );
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE" });

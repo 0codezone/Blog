@@ -18,7 +18,9 @@ export default function SinglePost() {
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("http://localhost:8801/api/posts/" + path);
+      const res = await axios.get(
+        "https://mern-blog-app-i7er.onrender.com/api/posts/" + path
+      );
       // console.log(res.data)
       setPost(res.data);
       setTitle(res.data.title);
@@ -30,9 +32,12 @@ export default function SinglePost() {
   // ----------------------------------------------------delete post
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:8801/api/posts/${post._id}`, {
-        data: { username: user.username },
-      });
+      await axios.delete(
+        `https://mern-blog-app-i7er.onrender.com/api/posts/${post._id}`,
+        {
+          data: { username: user.username },
+        }
+      );
       window.location.replace("/");
     } catch (error) {
       console.log(error);
@@ -41,11 +46,14 @@ export default function SinglePost() {
   // ----------------------------------------------------update post
   const handleUpdate = async () => {
     try {
-      await axios.put(`http://localhost:8801/api/posts/${post._id}`, {
-        username: user.username,
-        title,
-        desc,
-      });
+      await axios.put(
+        `https://mern-blog-app-i7er.onrender.com/api/posts/${post._id}`,
+        {
+          username: user.username,
+          title,
+          desc,
+        }
+      );
       // window.location.reload();
       sestUpdateMode(false);
     } catch (error) {

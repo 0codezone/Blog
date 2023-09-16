@@ -14,7 +14,7 @@ export default function Home() {
     const fetchPosts = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8801/api/posts" + search
+          "https://mern-blog-app-i7er.onrender.com/api/posts" + search
         );
         // console.log(response.data);
         setPosts(response.data);

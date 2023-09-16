@@ -12,11 +12,14 @@ export default function Register() {
     e.preventDefault(); // submit to kr deta h or bar bar refresh krne se bachata h
     setError(false);
     try {
-      const res = await axios.post("http://localhost:8801/api/auth/register", {
-        username,
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "https://mern-blog-app-i7er.onrender.com/api/auth/register",
+        {
+          username,
+          email,
+          password,
+        }
+      );
       res.data && window.location.replace("/login");
     } catch (err) {
       setError(true);
