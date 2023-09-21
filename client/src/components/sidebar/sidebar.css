@@ -1,4 +1,4 @@
-.sidebar {
+/* .sidebar {
     flex: 3;
     height: fit-content;
     margin: 20px;
@@ -8,15 +8,15 @@
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-}
+/* } */
 
-.sidebarItem {
+/* .sidebarItem {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 
-.sidebarTitle {
+/* .sidebarTitle {
     margin: 10px;
     padding: 5px;
     width: 80%;
@@ -28,8 +28,8 @@
     line-height: 19px;
     color: #222222;
     font-weight: 600;
-}
-
+} */
+/* 
 .sidebarItem>img {
     margin-top: 15px;
     width: 250px;
@@ -66,5 +66,124 @@
 }
 
 .link {
-    color: #1c1241;
+    color: #1c1241; */
+/* } */
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------version 2 */
+/* Styling for the sidebar container */
+.sidebar {
+    flex: 5;
+    margin: 20px;
+    padding-bottom: 30px;
+    background-color: #f0f5f9;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for sidebar items */
+.sidebarItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for the sidebar title */
+.sidebarTitle {
+    margin: 10px;
+    padding: 5px;
+    width: 80%;
+    border-top: solid 2px #333;
+    border-bottom: solid 2px #333;
+    text-align: center;
+    font-family: "Varela Round", sans-serif;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Styling for sidebar images */
+.sidebarItem>img {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for sidebar text content */
+.sidebarItem>p {
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Styling for the categories list */
+.sidebarList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for category list items */
+.sidebarListItem {
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Styling for social icons */
+.sidebarSocial {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling for social icons */
+.sidebarIcon {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #007bff;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+
+    /* Adjustments for smaller screens */
+    .sidebar {
+        /* margin: 10px;
+        padding-bottom: 20px; */
+        display: none;
+    }
+
+    /* 
+    .sidebarTitle {
+        font-size: 14px;
+    }
+
+    .sidebarItem>img {
+        max-width: 200px;
+    }
+
+    .sidebarItem>p {
+        font-size: 12px;
+    }
+
+    .sidebarListItem {
+        font-size: 14px;
+    }
+
+    .sidebarIcon {
+        font-size: 20px;
+    } */
 }

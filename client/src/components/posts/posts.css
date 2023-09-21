@@ -1,6 +1,68 @@
-.posts {
-    flex: 9;
+/* .posts {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+} */
+
+.posts {
+    flex: 7;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 20px;
+}
+
+/* Initially hide sidebar items */
+.posts>.sidebarItem {
+    display: none;
+}
+
+/* Display sidebar items when screen width is 768px or less */
+@media screen and (max-width: 768px) {
+    .posts>.sidebarItem {
+        display: block;
+        text-align: center;
+        width: 100%;
+        background-color: hsl(0, 0%, 94%);
+        padding: 12px;
+        margin-bottom: 5px;
+        border: 1px solid hsl(0, 0%, 80%);
+
+    }
+
+    /* Style the title */
+    .sidebarTitle {
+        font-size: 18px;
+        font-weight: bold;
+        /* Adjust as needed */
+    }
+
+    /* Remove default list styles */
+    .sidebarList {
+        list-style: none;
+        justify-content: center;
+        display: flex;
+    }
+
+    /* Style list items */
+    .sidebarListItem {
+        padding: 5px;
+        margin: 5px;
+        font-size: 14px;
+        /* Add more styles as needed */
+    }
+
+    /* Style links */
+    .link {
+        text-decoration: none;
+        color: #333;
+        /* Example link color */
+    }
+
+    /* Style links on hover */
+    .link:hover {
+        text-decoration: underline;
+        /* Add more styles as needed */
+    }
 }

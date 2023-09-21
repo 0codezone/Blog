@@ -1,4 +1,4 @@
-.login {
+/* .login {
     height: calc(100vh - 50px);
     display: flex;
     flex-direction: column;
@@ -55,4 +55,102 @@
     padding: 10px;
     color: white;
     border-radius: 10px;
+} */
+
+
+/* ------------------------------------------------------------------------------ */
+
+/* Styling for the container div */
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    background: linear-gradient(rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0.5)),
+        url("https://images.pexels.com/photos/768473/pexels-photo-768473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    background-size: cover;
+}
+
+/* Styling for the Login title */
+.loginTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Styling for the form */
+.loginForm {
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for labels */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: block;
+    color: #555;
+}
+
+/* Styling for input fields */
+.loginInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+/* Styling for the Login button */
+.loginButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.loginButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.loginButton:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for the Register button */
+.loginRegisterButton {
+    background-color: #007bff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.link:hover {
+    text-decoration: underline;
 }
