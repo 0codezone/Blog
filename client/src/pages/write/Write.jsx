@@ -2,12 +2,14 @@ import { useContext, useState } from "react";
 import "./write.css";
 import axios from "axios";
 import { Context } from "../../context/Context";
+import { useNavigate } from "react-router-dom";
 
 export default function Write() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,15 +30,20 @@ export default function Write() {
           "https://mern-blog-app-i7er.onrender.com/api/upload",
           data
         );
-      } catch (err) {}
+      } catch (err) {
+        alert("Upload failed");
+      }
     }
     try {
       const res = await axios.post(
         "https://mern-blog-app-i7er.onrender.com/api/posts",
         newPost
       );
-      window.location.replace("/post/" + res.data._id);
-    } catch (err) {}
+      // window.location.replace("/post/" + res.data._id);
+      navigate("/post/" + res.data._id);
+    } catch (err) {
+      alert("Create post failed");
+    }
   };
   return (
     <div className="write">
@@ -70,9 +77,11 @@ export default function Write() {
             onChange={(e) => setDesc(e.target.value)}
           ></textarea>
         </div>
-        <button className="writeSubmit" type="submit">
-          Publish
-        </button>
+        <div>
+          <button className="writeSubmit" type="submit">
+            Publish
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -1,3 +1,4 @@
+/* Base styles for all screen sizes */
 .write {
     padding-top: 50px;
 }
@@ -21,8 +22,8 @@
 }
 
 .writeIcon {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     font-size: 20px;
     border: 1px solid;
     border-radius: 50%;
@@ -31,6 +32,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    margin-left: 20px;
 }
 
 .writeInput {
@@ -69,4 +71,29 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+}
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .writeImg {
+        margin-left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .writeFormGroup {
+        margin-left: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .writeInput,
+    .writeText {
+        width: 100%;
+    }
+
+    .writeSubmit {
+        position: static;
+        margin-top: 20px;
+    }
 }
