@@ -33,9 +33,11 @@ export default function Posts({ posts }) {
             ))}
           </ul>
         </div>
-        {posts.map((p, key) => (
-          <Post key={key} post={p} />
-        ))}
+        <div className="scrollable-div">
+          {posts.map((p, key) => (
+            <Post key={key} post={p} />
+          ))}
+        </div>
       </div>
     </>
   );

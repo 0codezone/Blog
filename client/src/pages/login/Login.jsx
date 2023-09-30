@@ -34,7 +34,7 @@ export default function Login() {
         <input
           type="text"
           className="loginInput"
-          placeholder="Enter your username..."
+          placeholder="Enter your username or email.."
           onChange={(e) => setUsername(e.target.value)}
         />
         <label>Password</label>

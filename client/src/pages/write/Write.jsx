@@ -71,16 +71,18 @@ export default function Write() {
         </div>
         <div className="writeFormGroup">
           <textarea
+            rows="5"
+            cols="40"
             placeholder="Tell your story..."
             type="text"
             className="writeInput writeText"
             onChange={(e) => setDesc(e.target.value)}
           ></textarea>
-        </div>
-        <div>
-          <button className="writeSubmit" type="submit">
-            Publish
-          </button>
+          <div>
+            <button className="writeSubmit" type="submit">
+              Publish
+            </button>
+          </div>
         </div>
       </form>
     </div>

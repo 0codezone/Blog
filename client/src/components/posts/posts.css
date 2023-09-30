@@ -18,6 +18,11 @@
     display: none;
 }
 
+.scrollable-div {
+    overflow-y: auto;
+    max-height: 550px;
+}
+
 /* Display sidebar items when screen width is 768px or less */
 @media screen and (max-width: 768px) {
     .posts>.sidebarItem {
