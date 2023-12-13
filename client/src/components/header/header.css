@@ -32,14 +32,12 @@
 
 /* ------------------------------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------------------------------------ */
-/* Styling for the header container */
 .header {
-    margin-top: 60px;
+    /* margin-top: 60px; */
     position: relative;
-    /* Make it a relative positioning context for absolute children */
+
 }
 
-/* Styling for the header titles */
 .headerTitles {
     display: flex;
     flex-direction: column;
@@ -48,17 +46,11 @@
     color: transparent;
 
     text-align: center;
-    /* Center-align text */
     position: absolute;
-    /* Position titles absolutely within the header */
     top: 20%;
-    /* Vertically center titles */
     left: 50%;
     transform: translate(-50%, -50%);
-    /* Center horizontally */
-    /* Apply gradient background to text */
     background: linear-gradient(to top, #c1c1c1, #01ae47);
-    /* Use your desired gradient colors */
     -webkit-background-clip: text;
     background-clip: text;
 
@@ -67,21 +59,38 @@
 .headerTitleSm {
     font-size: 20px;
     margin-top: 10px;
-    /* Adjust spacing between titles */
+
 }
 
 .headerTitleLg {
     font-size: 100px;
     margin-top: 10px;
-    /* Adjust spacing between titles */
 }
 
-/* Styling for the header image */
+.writebtn {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #01ae47;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    transition: all 0.3s ease;
+
+}
+
+.writebtn a {
+    text-decoration: none;
+    color: #010101;
+}
+
+
 .headerImg {
     width: 100%;
     max-height: 450px;
-    /* Set a maximum height to avoid stretching */
     object-fit: cover;
-    margin-top: 20px;
-    /* Slightly adjust the margin */
 }

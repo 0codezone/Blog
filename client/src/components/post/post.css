@@ -72,7 +72,8 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.5s ease;
+    transition: background-color 0.5s ease;
     background-color: #8fffb62c;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 5px;
@@ -80,6 +81,8 @@
 
 .post:hover {
     border-color: #007bff;
+    background-color: #7dffaa6c;
+
 }
 
 .post img.postImg {

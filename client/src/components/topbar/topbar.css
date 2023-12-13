@@ -1,6 +1,5 @@
 /* Topbar.css */
 
-/* Default styles for larger screens (desktop) */
 .top {
     display: flex;
     justify-content: space-between;
@@ -8,16 +7,22 @@
     background-color: #333;
     color: white;
     padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+
 }
 
-.topLeft {
-    display: flex;
+.topLeft h1 {
+    /* display: flex; */
+    color: white;
 }
 
-.topIcon {
-    margin: 3px;
+/* .topIcon { */
+/* margin: 3px;
     font-size: 20px;
-}
+} */
 
 .topCenter {
     flex: 1;
@@ -58,13 +63,10 @@
     margin-right: 10px;
 }
 
-/* Styles for mobile menu button */
 .mobileMenuButton {
     display: none;
-    /* Initially hide the button on larger screens (desktop) */
 }
 
-/* Media query for smaller screens (e.g., mobile devices) */
 @media screen and (max-width: 768px) {
     .top {
         flex-direction: row;
@@ -77,14 +79,11 @@
 
     .topList {
         display: none;
-        /* Hide the menu items on mobile screens */
     }
 
     .mobileMenuButton {
         display: block;
-        /* Display the menu button on smaller screens (mobile) */
         color: white;
-        /* Set the text color to white */
         cursor: pointer;
         font-size: 24px;
         padding: 5px;
@@ -92,10 +91,8 @@
 
     .fas.fa-bars.active {
         transform: rotate(90deg);
-        /* Rotate the menu icon when active */
     }
 
-    /* Show the menu items when the mobile menu is open */
     .topList.active {
         display: flex;
         flex-direction: column;

@@ -21,10 +21,7 @@ export default function Topbar() {
   return (
     <div className={`top ${mobileMenuOpen ? "mobile-open" : ""}`}>
       <div className="topLeft">
-        <i className="topIcon fab fa-facebook-square"></i>
-        <i className="topIcon fab fa-instagram-square"></i>
-        <i className="topIcon fab fa-pinterest-square"></i>
-        <i className="topIcon fab fa-twitter-square"></i>
+        <h1>BLOG</h1>
       </div>
 
       <div className={`topCenter ${mobileMenuOpen ? "active" : ""}`}>
@@ -34,8 +31,16 @@ export default function Topbar() {
               HOME
             </Link>
           </li>
-          <li className="topListItem">ABOUT</li>
-          <li className="topListItem">CONTACT</li>
+          <li className="topListItem">
+            <Link className="link" to="/about">
+              ABOUT
+            </Link>
+          </li>
+          <li className="topListItem">
+            <Link className="link" to="/contact">
+              CONTACT
+            </Link>
+          </li>
           <li className="topListItem">
             <Link className="link" to="/write">
               WRITE
